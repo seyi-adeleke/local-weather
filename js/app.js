@@ -8,8 +8,7 @@ $(document).ready(function(){
         .done (function (location) {
             $('#country').html(location.country);
             $('#city').html(location.city);
-            $('#latitude').html(location.latitude);
-            $('#longitude').html(location.longitude);
+            $('#location').html(location.loc);
 
         });
 });

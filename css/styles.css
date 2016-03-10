@@ -6,14 +6,8 @@ body{
     color: whitesmoke;
     font-size: 60px;
 }
-#city{
-    color:whitesmoke;
-}
-#country{
-    color:whitesmoke;
-}
-#temperature{
-    color:whitesmoke;
+#detailing{
+    color: whitesmoke;
 }
 hr{
     border: 0;
