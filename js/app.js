@@ -17,7 +17,7 @@ $(document).ready(function(){
             lat:location.lat,
             lon:location.lon
         }).done(function(weather) {
-            $("#temperature").text(Math.round(weather.main.temp));
+            $("#temperature").html(weather.main.temp +"°C");
 
         })
     });
