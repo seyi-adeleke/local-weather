@@ -11,7 +11,7 @@ $(document).ready(function(){
         var locationCoords = document.getElementById("location");
         locationCoords.innerHTML = "lat:"+ location.lat+ ",";
         locationCoords.innerHTML += "long:" + location.lon;
-        var weatherApi ='http://api.openweathermap.org/data/2.5/weather?lat='+location.lat+'&lon='+location.lon+'&appid=19037534c7624a5254a20b799495dbcc';
+        var weatherApi ='http://api.openweathermap.org/data/2.5/weather?lat='+location.lat+'&lon='+location.lon+'&units=metric&appid=19037534c7624a5254a20b799495dbcc';
 
         $.getJSON(weatherApi,{
             lat:location.lat,
@@ -21,4 +21,10 @@ $(document).ready(function(){
 
         })
     });
+    function converter(){
+        var currentTemp = document.getElementById('temperature');
+        $(currentTemp).onclick(function(){
+
+        });
+    }
 });
