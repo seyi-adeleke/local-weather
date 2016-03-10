@@ -6,6 +6,15 @@ body{
     color: whitesmoke;
     font-size: 60px;
 }
+#city{
+    color:whitesmoke;
+}
+#country{
+    color:whitesmoke;
+}
+#temperature{
+    color:whitesmoke;
+}
 hr{
     border: 0;
     height: 1px;
