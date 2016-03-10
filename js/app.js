@@ -17,14 +17,10 @@ $(document).ready(function(){
             lat:location.lat,
             lon:location.lon
         }).done(function(weather) {
-            $("#temperature").html(weather.main.temp +"°C");
+            $("#temperature").html(weather.main.temp);
 
         })
     });
-    function converter(){
-        var currentTemp = document.getElementById('temperature');
-        $(currentTemp).onclick(function(){
 
-        });
-    }
+
 });

@@ -9,6 +9,17 @@ body{
 #detailing{
     color: whitesmoke;
 }
+#button{
+float:left;
+    margin-left: 10px;
+}
+#temperature{
+float:left;
+}
+#tempButtonWrapper{
+    margin-left:650px;
+    margin-right:400px;
+}
 hr{
     border: 0;
     height: 1px;
