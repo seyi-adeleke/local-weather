@@ -10,9 +10,18 @@ body{
     color: whitesmoke;
 }
 #button{
-float:left;
+    outline: none;
+    border-radius: 360px;
+    background-color: red;
+    float:left;
+    margin-left: 10px;
+
+}
+#button2{
+    float:left;
     margin-left: 10px;
 }
+
 #temperature{
 float:left;
 }

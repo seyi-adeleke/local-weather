@@ -18,9 +18,20 @@ $(document).ready(function(){
             lon:location.lon
         }).done(function(weather) {
             $("#temperature").html(weather.main.temp);
+            $( "#button" ).click(function()
+            {
+                var CelsiusTemp =weather.main.temp;
+                $("#temperature").html(CelsiusTemp);
+            });
+            $( "#button2" ).click(function()
+            {
+                var CelsiusTemp =weather.main.temp;
+                var fahrenheitTemp = (CelsiusTemp  * (9/5) + 32).toFixed(2);
+                $("#temperature").html(fahrenheitTemp);
+            });
 
-        })
+
+        });
     });
-
 
 });
