@@ -13,20 +13,20 @@ $(document).ready(function(){
         locationCoords.innerHTML += "LONG:" + location.lon;
         var weatherApi ='http://api.openweathermap.org/data/2.5/weather?lat='+location.lat+'&lon='+location.lon+'&units=metric&appid=19037534c7624a5254a20b799495dbcc';
 
-        $.getJSON(weatherApi,{
+        $.getJSON(weatherApi, {
             lat:location.lat,
             lon:location.lon
-        }).done(function(weathers) {
-            $("#current_weather").html(weathers.weather[0].main);
-            $("#temperature").html(weathers.main.temp);
+        }).done(function(weather) {
+            $("#current_weather").html(weather.weather[0].main);
+            $("#temperature").html(weather.main.temp);
             $( "#button" ).click(function()
             {
-                var CelsiusTemp =weathers.main.temp.toFixed(2);
+                var CelsiusTemp=weather.main.temp.toFixed(2);
                 $("#temperature").html(CelsiusTemp);
             });
             $( "#button2" ).click(function()
             {
-                var CelsiusTemp =weathers.main.temp;
+                var CelsiusTemp =weather.main.temp;
                 var fahrenheitTemp = (CelsiusTemp  * (9/5) + 32).toFixed(2);
                 $("#temperature").html(fahrenheitTemp);
             });
