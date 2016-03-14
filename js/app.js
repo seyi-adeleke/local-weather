@@ -7,10 +7,10 @@ $(document).ready(function(){
 
     $.getJSON(cityUrl).done (function (location) {
         $('#country').html(location.country);
-        $('#city').html(location.city);
+        $('#city').html(location.city+",");
         var locationCoords = document.getElementById("location");
-        locationCoords.innerHTML = "lat:"+ location.lat+ ",";
-        locationCoords.innerHTML += "long:" + location.lon;
+        locationCoords.innerHTML = "LAT:"+ location.lat+ ",";
+        locationCoords.innerHTML += "LONG:" + location.lon;
         var weatherApi ='http://api.openweathermap.org/data/2.5/weather?lat='+location.lat+'&lon='+location.lon+'&units=metric&appid=19037534c7624a5254a20b799495dbcc';
 
         $.getJSON(weatherApi,{

@@ -1,6 +1,7 @@
 body{
     background-color: #333;
-    font-family: ;
+     @import url(https://fonts.googleapis.com/css?family=Raleway);
+    font-family: 'Raleway', sans-serif;
 }
 
 .title{
@@ -18,8 +19,12 @@ body{
     margin-left: 10px;
     color: aliceblue;
     font:inherit;
-
 }
+#button:hover{
+    border-color: #737373;
+    color:darkgray;
+}
+
 #button2{
     outline: none;
     border-radius: 360px;
@@ -28,11 +33,15 @@ body{
     margin-left: 10px;
     color: aliceblue;
     font:inherit;
-
+}
+#button2:hover{
+    border-color: #737373;
+    color:darkgray;
 }
 
 #temperature{
-float:left;
+    float:left;
+    font-size: 20px;
 }
 #tempButtonWrapper{
     margin-left:650px;
