@@ -20,7 +20,7 @@ $(document).ready(function(){
             $("#temperature").html(weather.main.temp);
             $( "#button" ).click(function()
             {
-                var CelsiusTemp =weather.main.temp;
+                var CelsiusTemp =weather.main.temp.toFixed(2);
                 $("#temperature").html(CelsiusTemp);
             });
             $( "#button2" ).click(function()

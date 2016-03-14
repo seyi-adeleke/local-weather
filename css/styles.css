@@ -1,5 +1,6 @@
 body{
     background-color: #333;
+    font-family: ;
 }
 
 .title{
@@ -12,14 +13,22 @@ body{
 #button{
     outline: none;
     border-radius: 360px;
-    background-color: red;
+    background-color: #333;
     float:left;
     margin-left: 10px;
+    color: aliceblue;
+    font:inherit;
 
 }
 #button2{
+    outline: none;
+    border-radius: 360px;
+    background-color: #333;
     float:left;
     margin-left: 10px;
+    color: aliceblue;
+    font:inherit;
+
 }
 
 #temperature{
