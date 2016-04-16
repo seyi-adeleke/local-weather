@@ -12,7 +12,6 @@ $(document).ready(function(){
         locationCoords.innerHTML = "LAT:"+ location.lat + ",";
         locationCoords.innerHTML += "LONG:" + location.lon;
         var weatherApi ='http://api.openweathermap.org/data/2.5/weather?lat='+location.lat+'&lon='+location.lon+'&units=metric&appid=19037534c7624a5254a20b799495dbcc';
-
         $.getJSON(weatherApi, {
             lat:location.lat,
             lon:location.lon
@@ -30,9 +29,8 @@ $(document).ready(function(){
                 var fahrenheitTemp = (CelsiusTemp  * (9/5) + 32).toFixed(2);
                 $("#temperature").html(fahrenheitTemp);
             });
-
-
         });
     });
+
 
 });
