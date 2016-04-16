@@ -6,16 +6,14 @@ $(document).ready(function(){
     var cityUrl = 'http://ip-api.com/json';
 
     $.getJSON(cityUrl).done (function (location) {
-        $('#country').html(location.country);
         $('#city').html(location.city+",");
-        var locationCoords = document.getElementById("location");
+        $('#country').html(location.country);
+     /*   var locationCoords = document.getElementById("location");
         locationCoords.innerHTML = "LAT:"+ location.lat + ",";
         locationCoords.innerHTML += "LONG:" + location.lon;
+     */
         var weatherApi ='http://api.openweathermap.org/data/2.5/weather?lat='+location.lat+'&lon='+location.lon+'&units=metric&appid=19037534c7624a5254a20b799495dbcc';
-        $.getJSON(weatherApi, {
-            lat:location.lat,
-            lon:location.lon
-        }).done(function(weather) {
+        $.getJSON(weatherApi).done(function(weather){
             $("#current_weather").html(weather.weather[0].main);
             $("#temperature").html(weather.main.temp);
             $( "#button" ).click(function()
@@ -29,7 +27,16 @@ $(document).ready(function(){
                 var fahrenheitTemp = (CelsiusTemp  * (9/5) + 32).toFixed(2);
                 $("#temperature").html(fahrenheitTemp);
             });
+            var weather_icon = weather.weather[0].main;
+            if(weather_icon == "Clouds"){
+                $("#icons").addClass("wi-cloud");
+            }
+            else if(weather_icon == "Rain"){
+                $("#icons").addClass("wi-rain");
+            }
+
         });
+
     });
 
 
