@@ -1,6 +1,6 @@
 body{
-    background-color: #333;
-     @import url(https://fonts.googleapis.com/css?family=Raleway);
+    background-color:#34495e;
+@import url(https://fonts.googleapis.com/css?family=Raleway);
     font-family: 'Raleway', sans-serif;
 }
 
@@ -11,7 +11,11 @@ body{
 #detailing{
     color: whitesmoke;
 }
-#button{
+#detailing:empty{
+    display: none;
+}
+#button1{
+    border-color:aliceblue;
     outline: none;
     border-radius: 360px;
     background-color: #333;
@@ -20,12 +24,13 @@ body{
     color: aliceblue;
     font:inherit;
 }
-#button:hover{
+#button1:hover{
     border-color: #737373;
     color:darkgray;
 }
 
 #button2{
+    border-color:darkgray;
     outline: none;
     border-radius: 360px;
     background-color: #333;
@@ -57,6 +62,9 @@ hr{
 }
 #current_weather{
     color:white;
+}
+#current_weather:empty{
+    display: none;
 }
 
 @media all and (max-width: 700px){
