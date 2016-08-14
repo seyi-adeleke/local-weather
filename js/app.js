@@ -8,7 +8,7 @@ $(document).ready(function(){
     $.getJSON(cityUrl).done (function (location) {
         $('#city').html(location.city+",");
         $('#country').html(location.country);
-         /* var locationCoords = document.getElementById("location");
+        /* var locationCoords = document.getElementById("location");
          locationCoords.innerHTML = "LAT:"+ location.lat + ",";
          locationCoords.innerHTML += "LONG:" + location.lon;
          */
@@ -30,7 +30,7 @@ $(document).ready(function(){
                 $("#temperature").html(fahrenheitTemp +" °F" );
             });
             var weather_icon = weather.weather[0].description;
-            if(weather_icon == "few clouds"){
+            if(weather_icon == "few clouds"||"overcast clouds"){
                 $("#icons").addClass("wi-cloud");
             }
             else if(weather_icon == "light rain"){
